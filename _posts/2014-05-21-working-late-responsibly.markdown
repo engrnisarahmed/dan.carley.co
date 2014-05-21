@@ -39,7 +39,7 @@ Now neither of those are terrible things in themselves. But what we (and
 myself included) failed to account for is the effect that participating in
 this has on the people around us. It's a cycle that quietly and unwittingly
 ratchets up the pressure on our colleagues, who may either feel willingly
-egged-on to do the same or, much worse, unwilling pressured into keeping
+egged-on to do the same or, much worse, unwillingly pressured into keeping
 pace.
 
 If people observe others replying to email lists, pushing commits, opening
@@ -90,9 +90,9 @@ As a member of a team it's your duty to remind your peers what the
 expectations of the team are. For the benefit of yourself and others.
 
 Tell people to go home if you see them staying unnecessarily late in the
-office. If they have to stay late then remind them to take time-off-in-leui
+office. If they have to stay late then remind them to take time off in lieu
 where possible. Have a quiet word with people that send email at unsociable
-times, etc.
+times etc.
 
 ## Caveats
 
