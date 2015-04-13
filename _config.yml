@@ -4,6 +4,8 @@ email: dan.carley+hello@gmail.com
 description:
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://dan.carley.co" # the base hostname & protocol for your site
+permalink: /blog/:year/:month/:day/:title/
+
 twitter_username: dancarley
 github_username:  dcarley
 
