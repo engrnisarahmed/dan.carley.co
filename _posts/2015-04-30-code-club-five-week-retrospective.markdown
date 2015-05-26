@@ -161,7 +161,7 @@ that have their hands up then you can probably remain calm and effective
 during an outage.
 
 I haven't gained those skills from running the club. But I have been
-learning how to improve then and apply them to different situations.
+learning how to improve them and apply them to different situations.
 
 ### Preparation
 
@@ -190,8 +190,8 @@ Seriously, do not skimp on this. It's only by doing this that you'll
 recognise the pitfalls that the children (and yourself) will get stuck on.
 When they ask for help you won't need to read the description and repeat it
 yourself in order to offer advice. There are many things that you won't
-identify from just reading the sheet alone like how do you draw a musical
-note or what happens when the sprite is off-center.
+identify from just reading the sheet alone, like how do you draw a musical
+note or how do you make the sprite stopping spinning off-center.
 
 You can also include nice touches like giving them personal folders/wallets
 to keep their project sheets. It might not seem like much, but it goes a
@@ -216,10 +216,10 @@ normal. I still don't know.
 
 It wasn't until the third week when most of the club had started their
 second project that I started worrying about it less. They're definitely
-more comfortable with using Scratch now and our progress has sped up. The
-other thing that eased my mind was a child who joined us late in the third
-week, that completed the first project in one sitting and completed the
-second project the following week.
+more comfortable with using Scratch now and our progress has sped up. It
+also helped that a child who joined us late in the third week completed the
+first project in one sitting and completed the second project the following
+week.
 
 I did notice that some of the children were getting "stuck" trying to
 perfect the result of certain tasks. The way that some of the projects are
@@ -244,10 +244,11 @@ Which seems to have worked out well.
 
 Printing project sheets turned out to be a much bigger deal than I expected.
 Each project is up to 20 pages of A4 paper. For a club of 12 children that's
-up to 240 pages a week, which was beyond what I or the school could afford
-to print. It also seemed like a bit of a waste of paper. I tried duplex
-printing but was concerned that it was hard to follow one page to another
-unless you're used to reading and folding documents like that.
+up to 240 pages a week, which was beyond what the school or I could afford
+to print. It also seemed like quite a waste of paper. I tried duplex
+printing A4 sheets but was concerned that it was hard to follow from one
+page to another unless you're used to reading and folding documents like
+that.
 
 I compromised by making smaller A5 booklets. This reduced the amount of
 paper used by 3/4 and the ink used by 1/2. The smaller size has made them
@@ -286,14 +287,14 @@ be able to look at their sheet to determine how far they are and whether
 they've missed any steps. Besides, humans (not just children) are forgetful
 creatures.
 
-Another thing I read about was encouraging children to help each other if
-they were stuck. I thought that this would just happen organically,
+Another thing that I read about was encouraging children to help each other
+if they were stuck. I thought that this would just happen organically,
 especially amongst friends that sat together, but the first week proved this
 not to be the case. Children would ask questions that their neighbour had
 asked only minutes earlier. In hindsight, I guess this is to be expected; a
 lot of school lessons are about individual contribution unless they've been
 explicitly told to work in groups. I hadn't told them anything. In the
-second week I told them to ask the person near them if stuck because they
+second week I told them to ask the person near them when stuck because they
 might be further ahead and able to help. This dramatically reduced the
 amount of questions that I had to field and made the club feel more relaxed
 and collaborative.
