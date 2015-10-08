@@ -5,11 +5,11 @@ date: 2015-10-08T08:54:27+01:00
 categories: dev ops team conferences
 ---
 
-I recently attended two conferences; [Lead Developer](theleaddeveloper.com)
-and [Operability](operability.io). The organisers of both have done an
-excellent job of publishing good quality videos of the talks. Here is a list
-of talks that I really enjoyed, benefited from, and would recommend other
-people to watch. I won't attempt to summarise them for fear of missing
+I recently attended two conferences; [Lead Developer](http://2015.theleaddeveloper.com/)
+and [Operability](http://operability.io). The organisers of both have done
+an excellent job of publishing good quality videos of the talks. Here is a
+list of talks that I really enjoyed, benefited from, and would recommend
+other people to watch. I won't attempt to summarise them for fear of missing
 something out and there are better summaries on the internet already. I'll
 forewarn you that there's a bias towards people skills over technology.
 
