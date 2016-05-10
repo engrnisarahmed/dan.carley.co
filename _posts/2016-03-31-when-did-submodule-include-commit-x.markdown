@@ -52,6 +52,9 @@ fi
 
 for parent_commit in $(git rev-list --reverse HEAD -- "${path}"); do
   sub_commit=$(git ls-tree -d "${parent_commit}" -- "${path}" | awk '{print $3}')
+  if [ -z "${sub_commit}" ]; then
+    continue
+  fi
   if echo "${good_commits}" | grep -qw "${sub_commit}"; then
     echo "${parent_commit}"
     exit 0
