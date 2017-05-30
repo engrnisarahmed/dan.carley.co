@@ -90,7 +90,7 @@ thereabouts) is a common current limiting resistor for driving an LED and
 that 10KΩ can be used between +ve power and a gate to "pull it high". So I
 knew *how* they were used, but not *where* on the board.
 
-[cuttle]: XXX
+[cuttle]: /blog/2017/05/16/boldport-cuttle-just-less-than-perfect/
 
 To understand the circuit a bit better I drew it out on paper while looking
 at the pads and traces. The traces are pretty squiggly and hard to follow in
