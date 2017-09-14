@@ -4,17 +4,16 @@ title: About
 permalink: /about/
 ---
 
-I'm a Linux and OpenBSD systems administrator. Background in scalable web infrastructure and network engineering. Occasional software developer. Enthusiastic user of Puppet and Python. Sufferer of Ruby.
+I'm an experienced systems administrator, software developer, and network
+engineer. I enjoy writing Go code and contributing to open source.
 
-Away from the green screen I enjoy a bit of trad rock climbing, wild camping, kayaking and novice parenting.
+Away from the screen I can be found climbing, cycling, photographing,
+generally being outdoors, and parenting like an eternal novice.
 
-You might find me on..
+You can find me on..
 
- - Freenode IRC as *dcarley*
  - Twitter as [@dancarley](http://twitter.com/dancarley)
  - Github at [/dcarley](http://github.com/dcarley)
- - ServerFault as [Dan Carley](http://serverfault.com/users/7083)
+ - Email at [dan.carley+hello@gmail.com](mailto:dan.carley+hello@gmail.com)
 
-I can also be contacted at: [dan.carley+hello@gmail.com](mailto:dan.carley+hello@gmail.com)
-
-CV available upon request. Please do not send me LinkedIn invites.
+CV available upon request. I don't use LinkedIn.
