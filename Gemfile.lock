@@ -38,7 +38,7 @@ GEM
       sass (~> 3.2)
     jekyll-watch (1.2.1)
       listen (~> 2.7)
-    json (1.8.2)
+    json (2.1.0)
     kramdown (1.6.0)
     liquid (2.6.2)
     listen (2.10.0)
@@ -108,7 +108,7 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    yajl-ruby (1.2.1)
+    yajl-ruby (1.2.2)
 
 PLATFORMS
   ruby
@@ -117,3 +117,6 @@ DEPENDENCIES
   octopress
   octopress-codefence
   octopress-solarized
+
+BUNDLED WITH
+   1.15.4
