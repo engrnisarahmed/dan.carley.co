@@ -3,3 +3,8 @@ languageCode: en-us
 title: dan.carley.co
 permalinks:
   post: /blog/:year/:month/:day/:title/
+menu:
+  main:
+    - name: "about"
+      identifier: "about"
+      url: "/about/"
