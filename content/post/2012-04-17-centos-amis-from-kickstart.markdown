@@ -3,7 +3,6 @@ categories: ops dev aws ec2 centos
 comments: true
 date: 2012-04-17T00:00:00Z
 title: CentOS AMIs from Kickstart
-url: /2012/04/17/centos-amis-from-kickstart/
 ---
 
 I've been doing some work on AWS EC2 again recently. Since there aren't any "official" CentOS AMIs and I'm dubious about using some of the public images, we had to build our own. Previously we have rolled these using instructions like [this](http://bodgitandscarper.co.uk/amazon-ec2/building-centos-5-images-for-ec2/) and [this](http://wiki.sysconfig.org.uk/display/howto/Build+your+own+Core+CentOS+5.x+AMI+for+Amazon+EC2). They worked okay but it sure was long-winded process. So much so, that I struggled to pick it up where I last left off.

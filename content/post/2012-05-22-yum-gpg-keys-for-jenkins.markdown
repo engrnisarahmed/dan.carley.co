@@ -3,7 +3,6 @@ categories: ops centos rhel yum puppet jenkins
 comments: true
 date: 2012-05-22T00:00:00Z
 title: Yum GPG keys for Jenkins
-url: /2012/05/22/yum-gpg-keys-for-jenkins/
 ---
 
 I use/mirror a number of third-party Yum repositories. The typical pattern for these is to import the vendor's public signing key using `rpm --import` and then setup a new entry `/etc/yum.repos.d` entry. Some vendors have `-release` packages that handle both steps. The trouble is, this creates a bit of a chicken/egg problem and doesn't lend itself so well to automation.

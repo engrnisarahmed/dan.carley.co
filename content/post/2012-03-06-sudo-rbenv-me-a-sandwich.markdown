@@ -3,7 +3,6 @@ categories: dev ruby
 comments: true
 date: 2012-03-06T00:00:00Z
 title: sudo rbenv me a sandwich
-url: /2012/03/06/sudo-rbenv-me-a-sandwich/
 ---
 
 In the name of practising-what-you-preach, I like to be in the habit of configuring my Linux workstations with Puppet in the same way that I do for servers. Though I confess I have fallen out of habit recently and accumulated a bunch of tools that haven't made it back to the manifests. Having just trashed my laptop, in an unrelated incident, I fancied the opportunity to check out [chef-solo](http://wiki.opscode.com/display/chef/Chef+Solo) for bringing a fresh install of Mint Linux up to speed.

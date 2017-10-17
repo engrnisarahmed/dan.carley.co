@@ -3,7 +3,6 @@ categories: ops ubuntu clamav pam_tmpdir apparmor
 comments: true
 date: 2013-12-16T00:00:00Z
 title: ClamAV broken pipe
-url: /2013/12/16/clamav-broken-pipe/
 ---
 
 A while ago we upgraded ClamAV at $JOB from an [fpm][fpm] package of

@@ -1,7 +1,6 @@
 ---
 date: 2017-05-24T11:08:56Z
 title: Boldport Cordwood Puzzle Too
-url: /2017/05/24/boldport-cordwood-puzzle-too/
 ---
 
 This post is about building the [Boldport Cordwood Puzzle Too][cp-too] which

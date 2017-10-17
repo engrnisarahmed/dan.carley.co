@@ -3,7 +3,6 @@ categories: ops monitoring metric retention
 comments: true
 date: 2012-10-04T00:00:00Z
 title: Metric retention just add one
-url: /2012/10/04/metric-retention-just-add-one/
 ---
 
 Something occurred to me a while back when I was setting up some monitoring. Maybe it's obvious to everyone else, but it's not something that I've seen discussed or written before:

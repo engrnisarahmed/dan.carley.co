@@ -3,7 +3,6 @@ categories: ops ipv6 linode
 comments: true
 date: 2012-07-11T00:00:00Z
 title: Now available in IPv6 flavour
-url: /2012/07/11/now-available-in-ipv6-flavour/
 ---
 
 A friend recently reminded me that IPv6 is still a thing. Contrary to what my ISP might have me know. That got me thinking, I must check that stuff out..

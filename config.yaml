@@ -2,3 +2,5 @@ baseURL: http://dan.carley.co
 disablePathToLower: true
 languageCode: en-us
 title: dan.carley.co
+permalinks:
+  post: /blog/:year/:month/:day/:title/

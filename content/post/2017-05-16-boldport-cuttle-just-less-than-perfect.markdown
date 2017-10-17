@@ -1,7 +1,6 @@
 ---
 date: 2017-05-16T15:00:53Z
 title: Boldport Cuttle (just less than perfect)
-url: /2017/05/16/boldport-cuttle-just-less-than-perfect/
 ---
 
 This post is about building the [Boldport Cuttle][] which is described as:

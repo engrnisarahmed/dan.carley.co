@@ -1,7 +1,6 @@
 ---
 date: 2016-03-31T08:45:25Z
 title: When did submodule include commit X
-url: /2016/03/31/when-did-submodule-include-commit-x/
 ---
 
 Cloud Foundry uses [git submodules][] in [cloudfoundry/cf-release][] to

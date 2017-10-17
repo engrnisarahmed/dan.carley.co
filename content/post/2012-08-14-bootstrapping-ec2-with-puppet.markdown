@@ -3,7 +3,6 @@ categories: ops dev aws ec2 centos puppet
 comments: true
 date: 2012-08-14T00:00:00Z
 title: Bootstrapping EC2 with Puppet
-url: /2012/08/14/bootstrapping-ec2-with-puppet/
 ---
 
 In a previous article I described the process of creating CentOS AMIs in EC2. I omitted the detail of how this single generic system image is turned around into real functioning nodes. This consists of a few things.
