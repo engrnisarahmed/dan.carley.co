@@ -1,5 +1,4 @@
 ---
-categories: dev ops team conferences
 date: 2015-10-08T08:54:27Z
 title: Lead Developer and Operability conferences 2015
 ---

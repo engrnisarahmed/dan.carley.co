@@ -1,5 +1,4 @@
 ---
-categories: dev ops osx
 comments: true
 date: 2013-01-11T00:00:00Z
 title: tmux scrollback with iTerm2

@@ -1,5 +1,4 @@
 ---
-categories: working hours team health burnout
 comments: true
 date: 2014-05-21T00:00:00Z
 title: Working late, responsibly

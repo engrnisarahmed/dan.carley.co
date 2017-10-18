@@ -1,5 +1,4 @@
 ---
-categories: ops dev aws ec2 centos puppet
 comments: true
 date: 2012-08-14T00:00:00Z
 title: Bootstrapping EC2 with Puppet

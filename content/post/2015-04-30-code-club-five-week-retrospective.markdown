@@ -1,5 +1,4 @@
 ---
-categories: code club education
 comments: true
 date: 2015-04-30T00:00:00Z
 title: Code Club five week retrospective

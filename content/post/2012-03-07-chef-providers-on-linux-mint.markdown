@@ -1,5 +1,4 @@
 ---
-categories: chef ops dev
 comments: true
 date: 2012-03-07T00:00:00Z
 title: Chef providers on Linux Mint

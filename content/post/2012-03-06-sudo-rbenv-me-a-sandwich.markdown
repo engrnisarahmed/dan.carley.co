@@ -1,5 +1,4 @@
 ---
-categories: dev ruby
 comments: true
 date: 2012-03-06T00:00:00Z
 title: sudo rbenv me a sandwich
