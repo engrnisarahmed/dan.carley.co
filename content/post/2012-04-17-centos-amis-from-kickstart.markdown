@@ -31,9 +31,9 @@ I'll be using [Fog](https://github.com/fog/fog) to do all of the lifting on AWS.
 
 My only criticism of Fog would be that the usage documentation is a little lacking or confusing in places. It took me a little while to piece together the right syntax for some of the calls. Though to be fair, some of those problems are just manifestations of API oddities at Amazon. I hope this article will supplement Google results for the other helpful examples I found.
 
-To kick off we need to give Fog our AWS credentials. You can use the master credentials found on the AWS account page or create a more restrictive account with IAM.
+To kick off we need to give Fog our AWS credentials in `~/.fog`. You can use the master credentials found on the AWS account page or create a more restrictive account with IAM.
 
-``` yaml ~/.fog
+``` yaml
 :default:
     :aws_access_key_id:     YOUR_KEY
     :aws_secret_access_key: YOUR_SECRET
@@ -101,7 +101,7 @@ Now we start to define our kickstart config. This part looks pretty standard. DH
 
 The root password is set to an unusable hash to prevent remote root logins. It is important to remember that not setting a `rootpw` option here results in a passwordless account that can be logged in or elevated to by anyone.
 
-``` sh ks-centos6.cfg
+``` sh
 keyboard uk
 lang en_GB.UTF-8
 timezone UTC
@@ -117,7 +117,7 @@ Since PV-GRUB takes care of most bootloading and we only want a single partition
 
 At this point, if you are creating an EBS AMI, then the partition size only needs to be big enough to take the initial installation. We'll set the real size of the AMI's partition later on.
 
-``` sh ks-centos6.cfg
+``` sh
 bootloader --timeout=0
 #clearpart --all --initlabel
 #zerombr
@@ -128,7 +128,7 @@ part / --size 1024 --fstype ext4
 
 A standard set of Yum repositories are defined. By including the updates repository we can ensure the image contains any security updates available at the time of building. For this reason it might be useful to recreate your image every now and then.
 
-``` sh ks-centos6.cfg
+``` sh
 repo --name=CentOS6-Base --mirrorlist=http://mirrorlist.centos.org/?release=6&arch=$basearch&repo=os
 repo --name=CentOS6-Updates --mirrorlist=http://mirrorlist.centos.org/?release=6&arch=$basearch&repo=updates
 repo --name=CentOS6-Addons --mirrorlist=http://mirrorlist.centos.org/?release=6&arch=$basearch&repo=extras
@@ -137,13 +137,13 @@ repo --name=EPEL --baseurl=http://download.fedoraproject.org/pub/epel/6/$basearc
 
 Because the installation is performed on the Fedora host outside of a chroot we can include additional repos from local file paths if you wish to inject additional packages.
 
-``` sh ks-centos6.cfg
+``` sh
 repo --name=Local --baseurl=file:///root/local_repo/
 ```
 
 The package sets are pretty minimal. We avoid pulling in anything more than is required for the OS to boot and network. Some packages are explicitly defined here because we'll use their binaries during the build process, but they could be safely omitted. We also need some packages specifically for use on EC2.
 
-``` sh ks-centos6.cfg
+``` sh
 %packages --nobase
 @core
 audit
@@ -175,7 +175,7 @@ Because our Fedora 16 host uses a newer version of RPM than both CentOS 5 and 6,
 
 If you were building a CentOS 5 image then you would use `db45_load` instead which is just-about backwards compatible with BDB 4.3
 
-``` sh ks-centos6.cfg
+``` sh
 %post --erroronfail --nochroot
 rm -f ${INSTALL_ROOT}/var/lib/rpm/__db*
 for RPMDB in ${INSTALL_ROOT}/var/lib/rpm/*; do
@@ -188,7 +188,7 @@ RPM 4.9 in Fedora 16 also uses Btrees for secondary indexes which is not backwar
 
 On CentOS 6 this generates an error about the `Name` database but this doesn't appear to cause any problems in the final image.
 
-``` sh ks-centos6.cfg
+``` sh
 %post --erroronfail
 rpm --rebuilddb
 %end
@@ -204,7 +204,7 @@ Lastly we need to relabel the guest's filesystem to ensure that SELinux will wor
 
 This must be performed as the very last `%post` script in your kickstart file. If not, you may create files that end up being unlabelled.
 
-``` sh ks-centos6.cfg
+``` sh
 %post --erroronfail
 mount -t tmpfs -o size=1 tmpfs /sys/fs/selinux
 mount -t tmpfs -o size=1 tmpfs /selinux

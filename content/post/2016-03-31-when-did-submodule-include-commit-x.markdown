@@ -37,7 +37,7 @@ that would brute force the information out:
 [@thekeymon]: https://twitter.com/thekeymon
 [@timmow]: https://twitter.com/timmow
 
-```sh git-submodule-contains
+```sh
 #!/bin/bash
 set -euo pipefail
 
@@ -63,9 +63,9 @@ done
 exit 1
 ```
 
-If you put the script in your `PATH` then you can use it as follows to find
-out which versions of cf-release included the commit
-[cloudfoundry/gorouter@d5c6aea][]:
+If you put the script in your `PATH` as `git-submodule-contains` then you
+can use it as follows to find out which versions of cf-release included the
+commit [cloudfoundry/gorouter@d5c6aea][]:
 
 [cloudfoundry/gorouter@d5c6aea]: https://github.com/cloudfoundry/gorouter/commit/d5c6aeacce7648d4b929a20f55682404e87187de
 

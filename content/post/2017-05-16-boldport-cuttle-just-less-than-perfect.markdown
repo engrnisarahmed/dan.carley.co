@@ -156,10 +156,10 @@ If you're using a variant of [Raspbian OS][] then you can use:
     apt-get update
     apt-get install -y avrdude
 
-You'll need to configure `avrdude` so that it knows which pins the Arduino
-is connected to. The numbering is "BCM", not physical:
+You'll need to configure `~/.avrduderc` so that it knows which pins the
+Arduino is connected to. The numbering is "BCM", not physical:
 
-```ini ~/.avrduderc
+```yaml
 programmer
   id    = "linuxgpio";
   desc  = "Use the Linux sysfs interface to bitbang GPIO lines";
@@ -246,7 +246,7 @@ connected correctly. To find out what the fuses should be changed to I
 looked in the `boards.txt` that comes inside the Arduino IDE and found the
 configuration for an Arduino Uno:
 
-```init boards.txt
+```ini
 uno.bootloader.tool=avrdude
 uno.bootloader.low_fuses=0xFF
 uno.bootloader.high_fuses=0xDE

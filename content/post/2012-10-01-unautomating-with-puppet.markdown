@@ -62,7 +62,7 @@ Here's a simple pattern that I use for managing such situations in Puppet. It tr
 
 A custom fact reports the current value from the configuration file where available. Since the Erlang cookie is sensitive information and Puppet facts can be stored and reported in plain text, we take a simple hash of the cookie value.
 
-``` ruby riak/lib/facter/riak_cookie_hash.rb
+``` ruby
 require 'digest/sha1'
 
 Facter.add(:riak_cookie_hash) do
@@ -86,7 +86,7 @@ end
 
 The manifest which manages the config file takes a externally-provided cookie parameter. An `if{}` condition checks for the presence of the fact above. If the fact isn't present then the package and default configuration probably haven't been installed yet, since facts are evaluated client-side before the catalog is compiled. The fact is then compared against a hash of the param. If they don't match then `fail()` is called to abort the catalog and prevent the configuration from being changed.
 
-``` ruby riak/manifests/init.pp
+``` ruby
 class riak($cookie) {
   if ($::riak_cookie_hash) and (sha1($cookie) != $::riak_cookie_hash) {
       fail('Riak cookie is already present. Cowardly refusing to modify value')

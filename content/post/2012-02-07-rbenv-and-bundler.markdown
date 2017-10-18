@@ -14,9 +14,9 @@ Installation is easy. Simply grab a clone of the project's repository into your 
 
     git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 
-There are two commands to activate rbenv in your normal shell. The first appends rbenv's binaries and shims to your `$PATH`, the second ensures the shims are up-to-date and enables Bash command completion. There is a more detailed [neckbeard explanation](https://github.com/sstephenson/rbenv#section_2.3) in the README if you are interested. You probably want to activate this for every shell.
+There are two commands to activate rbenv in your normal shell. The first appends rbenv's binaries and shims to your `$PATH`, the second ensures the shims are up-to-date and enables Bash command completion. There is a more detailed [neckbeard explanation](https://github.com/sstephenson/rbenv#section_2.3) in the README if you are interested. You probably want to activate this for every shell in `~/.profile`.
 
-``` sh ~/.profile
+```sh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 ```
@@ -66,11 +66,11 @@ Bundler is the only Gem that you need install the traditional way. You will need
     gem install bundler
     rbenv rehash
 
-The following config will tell Bundler to install all Gems into a single
-path in your home directory. This isolates them from your normal system or
-rbenv Ruby install when you're not using Bundler.
+The following `~/.bundle/config` will tell Bundler to install all Gems into a
+single path in your home directory. This isolates them from your normal system
+or rbenv Ruby install when you're not using Bundler.
 
-``` sh ~/.bundle/config
+```sh
 ---
 BUNDLE_PATH: ~/vendor/bundle
 BUNDLE_DISABLE_SHARED_GEMS: "1"
@@ -92,7 +92,8 @@ internet.
 
 I want to test out some things against two different versions of [Vagrant](http://vagrantup.com). One from the 0.8 series and the other from the recent 0.9 series. I also want to use Ruby 1.9.3 instead of my system's installation of 1.8.7. This I can do quite simply with the switch of a directory context.
 
-``` sh Vagrant 0.8.10 and Vbguest 0.0.3
+Vagrant 0.8.10 and Vbguest 0.0.3:
+```sh
 dan@dan-MacPro:~$ mkdir ~/projects/vagrant/0.8
 dan@dan-MacPro:~$ cd ~/projects/vagrant/0.8
 dan@dan-MacPro:~/projects/vagrant/0.8$ rbenv local 1.9.3-p0
@@ -121,7 +122,8 @@ dan@dan-MacPro:~/projects/vagrant/0.8$ vagrant --version
 Vagrant version 0.8.10
 ```
 
-``` sh Vagrant 0.9.5 and Vbguest 0.1.0
+Vagrant 0.9.5 and Vbguest 0.1.0:
+```sh
 dan@dan-MacPro:~$ mkdir ~/projects/vagrant/0.9
 dan@dan-MacPro:~$ cd ~/projects/vagrant/0.9
 dan@dan-MacPro:~/projects/vagrant/0.9$ rbenv local 1.9.3-p0

@@ -6,9 +6,9 @@ title: tmux scrollback with iTerm2
 
 ## tmux scrollback 
 
-If you regularly use [tmux](http://tmux.sourceforge.net/) then you might have a line like this in your config:
+If you regularly use [tmux](http://tmux.sourceforge.net/) then you might have a line like this in `~/.tmux.conf`:
 
-``` text ~/.tmux.conf
+``` text
 set -g terminal-overrides 'xterm*:smcup@:rmcup@'
 ```
 

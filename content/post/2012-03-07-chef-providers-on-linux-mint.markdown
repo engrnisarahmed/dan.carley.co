@@ -70,7 +70,7 @@ A search of `Chef::Platform` confirms that there are no references to `linuxmint
 
 [Chef::Platform](http://rubydoc.info/gems/chef/0.10.8/Chef/Platform) gives us two helpful methods [set()](http://rubydoc.info/gems/chef/0.10.8/Chef/Platform#set-class_method) and [find_provider()](http://rubydoc.info/gems/chef/0.10.8/Chef/Platform#find_provider-class_method). These can be used to register Mint in the same way as Ubuntu. We loop over the four resource types in question, looking up the default value for Ubuntu and setting the default for Mint.
 
-``` ruby solo.rb
+``` ruby
 require 'chef/platform'
 
 [:package, :service, :cron, :mdadm].each do |resource_type|
