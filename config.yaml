@@ -6,6 +6,11 @@ permalinks:
   post: /blog/:year/:month/:day/:title/
 menu:
   main:
+    - name: "home"
+      identifier: "home"
+      url: "/"
+      weight: 1
     - name: "about"
       identifier: "about"
       url: "/about/"
+      weight: 2
