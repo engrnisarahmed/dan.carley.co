@@ -2,6 +2,7 @@ baseURL: http://dan.carley.co
 languageCode: en-us
 title: dan.carley.co
 theme: minimo
+pygmentsCodeFences: true
 permalinks:
   post: /blog/:year/:month/:day/:title/
 menu:
