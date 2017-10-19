@@ -1,5 +1,4 @@
 ---
-comments: true
 date: 2012-10-04T00:00:00Z
 title: Metric retention just add one
 ---

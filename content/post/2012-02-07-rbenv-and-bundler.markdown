@@ -1,5 +1,4 @@
 ---
-comments: true
 date: 2012-02-07T00:00:00Z
 title: Rbenv and Bundler
 ---

@@ -1,5 +1,4 @@
 ---
-comments: true
 date: 2012-02-06T00:00:00Z
 title: Hello, blog
 ---

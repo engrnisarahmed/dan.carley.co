@@ -1,5 +1,4 @@
 ---
-comments: true
 date: 2012-04-17T00:00:00Z
 title: CentOS AMIs from Kickstart
 ---

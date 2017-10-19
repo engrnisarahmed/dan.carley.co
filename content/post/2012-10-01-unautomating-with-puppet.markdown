@@ -1,5 +1,4 @@
 ---
-comments: true
 date: 2012-10-01T00:00:00Z
 title: Unautomating with Puppet
 ---

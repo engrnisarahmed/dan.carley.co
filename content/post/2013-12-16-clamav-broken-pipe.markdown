@@ -1,5 +1,4 @@
 ---
-comments: true
 date: 2013-12-16T00:00:00Z
 title: ClamAV broken pipe
 ---

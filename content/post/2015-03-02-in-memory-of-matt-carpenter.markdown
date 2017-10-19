@@ -1,5 +1,4 @@
 ---
-comments: true
 date: 2015-03-02T00:00:00Z
 title: In memory of Matt Carpenter
 ---

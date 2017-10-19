@@ -1,5 +1,4 @@
 ---
-comments: true
 date: 2012-07-11T00:00:00Z
 title: Now available in IPv6 flavour
 ---

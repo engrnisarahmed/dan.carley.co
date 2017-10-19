@@ -1,5 +1,4 @@
 ---
-comments: true
 date: 2012-05-22T00:00:00Z
 title: Yum GPG keys for Jenkins
 ---
