@@ -16,3 +16,7 @@ menu:
       identifier: "about"
       url: "/about/"
       weight: 2
+
+outputFormats:
+  RSS:
+    baseName: "atom"
