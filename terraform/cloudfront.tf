@@ -1,3 +1,9 @@
+data "aws_acm_certificate" "website" {
+  domain   = "${var.website_name}"
+  statuses = ["ISSUED"]
+  provider = "aws.us-east"
+}
+
 resource "aws_cloudfront_distribution" "website" {
   origin {
     domain_name = "${aws_s3_bucket.website.website_endpoint}"
@@ -46,6 +52,8 @@ resource "aws_cloudfront_distribution" "website" {
   }
 
   viewer_certificate {
-    cloudfront_default_certificate = true
+    acm_certificate_arn      = "${data.aws_acm_certificate.website.arn}"
+    minimum_protocol_version = "TLSv1"
+    ssl_support_method       = "sni-only"
   }
 }
