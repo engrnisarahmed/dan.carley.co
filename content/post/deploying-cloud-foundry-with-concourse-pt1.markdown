@@ -12,27 +12,27 @@ blog posts:
 1. [Some interesting things we've done using Concourse][pt2]
 1. [Problems that we encountered using Concourse][pt3]
 
-[Concourse]: XXX
-[Cloud Foundry]: XXX
+[Concourse]: https://concourse.ci/
+[Cloud Foundry]: https://www.cloudfoundry.org/
 [pt1]: XXX
 [pt2]: XXX
 [pt3]: XXX
 
 ## Deploying Cloud Foundry
 
-To set the scene, here are the high-level steps involved in deploying a
-Cloud Foundry environment:
+Here are the high-level steps involved in deploying a Cloud Foundry
+environment:
 
 1. create some basic [IaaS][] resources (e.g. VPC and ELBs) with [Terraform][]
 1. render [BOSH][] manifests to include environment specific data (e.g. passwords) with [spruce][]
 1. deploy BOSH director with [bosh-init][]
 1. deploy Cloud Foundry with BOSH
 
-[IaaS]: XXX
-[Terraform]: XXX
-[BOSH]: XXX
-[spruce]: XXX
-[bosh-init]: XXX
+[IaaS]: https://en.wikipedia.org/wiki/Infrastructure_as_a_service
+[Terraform]: https://www.terraform.io/
+[BOSH]: https://bosh.io/
+[spruce]: https://github.com/geofffranks/spruce
+[bosh-init]: https://github.com/cloudfoundry/bosh-init
 
 ## Previously in our alpha
 
@@ -41,21 +41,21 @@ your own development environment of Cloud Foundry you would run a `Makefile`
 target, which ran the first step described above on your laptop and then ran
 the remaining steps via a bastion host with a variety of shell scripts.
 
-We optimised early to make it easy for every developer to create their own
-environment that would look like production. Later on we re-used the same
-tooling to create non-development environments, such as CI and production,
-by running the `Makefile` target from [Jenkins][] each time there was a new
-commit to our code repository.
+We optimised early for every developer to create their own environment that
+would look like production. Later on we re-used the same tooling to create
+non-development environments, such as CI and production, by running the
+`Makefile` target from [Jenkins][] each time there was a new commit to our
+code repository.
 
-You can see an archive of our old codebase at [gds-attic/paas-cf-terraform][].
+You can see an archive of our old codebase at [gds-attic/paas-alpha-cf-terraform][].
 
 This setup was sufficient during our alpha. It was relatively low effort to
 get working and allowed us to focus on testing whether Cloud Foundry was the
 right technology for us to use. But it did have some drawbacks..
 
 [alpha phase]: https://www.gov.uk/service-manual/agile-delivery/how-the-alpha-phase-works
-[Jenkins]: XXX
-[gds-attic/paas-cf-terraform]: XXX
+[Jenkins]: https://jenkins.io/
+[gds-attic/paas-alpha-cf-terraform]: https://github.com/gds-attic/paas-alpha-cf-terraform
 
 ### Debugging
 
@@ -66,12 +66,12 @@ read through most of the call-chain and codebase. You'd often find yourself
 doing that to figure out how far a deployment had progressed or why it had
 failed midway.
 
-It wasn't possible to restart the deployment from the place that it had
+It wasn't possible to resume the deployment from the place that it had
 failed. So you'd need to make your change, run everything from the beginning
 again, and hope that you'd got it right. Which was very frustrating and time
 consuming.
 
-There was also the disparate Jenkins layer to maintain and debug, which we
+There was also a disparate Jenkins layer to maintain and debug, which we
 rarely exercised in development environments. Although Jenkins has seen
 significant improvements in the past year, it still remains difficult to
 configure declaratively and easy to mutate the configuration through the web
@@ -93,12 +93,12 @@ would halt and you'd have to run it again from the beginning.
 ### Runtime dependencies
 
 Managing runtime dependencies was cumbersome. Especially for anything that
-ran locally on your laptop, such as Terraform and some of our Ruby
-scripting. Our team have a mixture of Mac and Linux laptops, which made it
-difficult to prescribe or reliably maintain the automated installation of
-dependencies, so everyone needed to remember to upgrade in-step. The same
-process was repeated again for our Jenkins machine which managed
-non-development environments.
+ran locally on your laptop, such as Terraform and Ruby scripting. Our team
+have a mixture of Mac and Linux laptops, which made it difficult to
+prescribe or reliably maintain the automated installation of dependencies,
+so everyone needed to remember to upgrade in-step. The same process was
+repeated again for our Jenkins machine which managed non-development
+environments.
 
 For our bastion host we had scripts that would install a handful of packages
 and binaries, in a way that hoped to be idempotent and upgradeable, but
@@ -110,10 +110,10 @@ this one host.
 ### Managing state
 
 The deployment of an environment creates some stateful data that needs to be
-retained for subsequent deployments. This includes Terraform's state so that
-it knows what IaaS resources have been created, bosh-init's state so that it
-knows where the BOSH director is, and passwords used for components within
-the environment.
+retained for subsequent deployments. This includes passwords used for
+components within the environment, Terraform's state so that it knows what
+IaaS resources have been created, and bosh-init's state so that it knows
+where the BOSH director is.
 
 All of this needs to be stored somewhere. Some of it exists on the place you
 initiate the deployment (your laptop or Jenkins) and some exists on the
@@ -168,18 +168,18 @@ progressing or failing.
 
 To resume a failed deployment without starting from the beginning you can
 restart an individual job with the original set of inputs. For more complex
-debugging you can use [`fly hijack`][] to get an interactive shell under the
+debugging you can use [`fly intercept`][] to get an interactive shell under the
 same environment that the job would have run in. These features have made
 our development process much simpler and quicker.
 
 For consistency, we deploy everything from a Concourse pipeline. This means
 that we can use the same tooling and idioms throughout, rather than having
-slightly different processes for development vs production or BOSH vs Cloud
-Foundry. The fact that Concourse has a good API to configure the pipelines
-and doesn't allow any configuration from the web interface has proved
-valuable - basically the exact opposite of Jenkins.
+slightly different processes for different components and environments. The
+fact that Concourse has a good API to configure the pipelines and doesn't
+allow any configuration from the web interface has proved valuable -
+basically the exact opposite of Jenkins.
 
-[`fly hijack`]: XXX
+[`fly intercept`]: https://concourse.ci/fly-intercept.html
 
 ### Connectivity
 
@@ -208,6 +208,6 @@ upgrade.
 You can see the code for the containers we use within our pipeline at
 [alphagov/paas-docker-cloudfoundry-tools][].
 
-[garden-runc]: XXX
-[Alpine Linux]: XXX
+[garden-runc]: https://content.pivotal.io/blog/adopting-the-runc-container-standard-in-cloud-foundry
+[Alpine Linux]: https://alpinelinux.org/
 [alphagov/paas-docker-cloudfoundry-tools]: https://github.com/alphagov/paas-docker-cloudfoundry-tools/
