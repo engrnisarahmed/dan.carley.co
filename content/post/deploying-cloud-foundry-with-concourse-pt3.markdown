@@ -135,6 +135,10 @@ co-located with Concourse, or [native support in Concourse][].
 [AWS Code Commit]: https://aws.amazon.com/codecommit/
 [native support in Concourse]: https://github.com/concourse/concourse/issues/282
 
+### Self updating pipelines
+
+- ensure jobs match code
+
 ### Stability
 
 We started using Concourse at version 0.68 and it felt a bit bleeding edge.
@@ -142,8 +146,8 @@ The quality of the releases has definitely improved immeasurably since then.
 
 For a long time we have trouble with Concourse 2.x slowing down and not
 scheduling new jobs. We spent a lot of time investigating and discussing in
-upstream issues, but in the end it became so common that we wrote [a script
-to turn it off and back on again][shake] and refer to it as "shaking
+upstream issues, but it became so common that we wrote [a script to turn it
+off and back on again][shake] and referred to the act of "shaking
 Concourse".
 
 Thankfully the [lifecycle rewrite][] in Concourse 3.x has since fixed our
@@ -158,7 +162,7 @@ When I first thought about writing this blog post, more than a year ago, I
 would have written about the size and diversity of interests in the
 Concourse community. At that time it was basically just a small subset of
 the Cloud Foundry community. This had an impact on Concourse features, for
-example it was only possible to deploy it with BOSH which is basically only
+example it was only possible to deploy with BOSH which is basically only
 used by Cloud Foundry operators. This had a circular impact on additional
 features and increasing the size of the community.
 

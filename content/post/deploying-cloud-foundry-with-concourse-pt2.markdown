@@ -61,9 +61,10 @@ can use them too.
 
 ### Automated testing
 
-Having a pipeline has allowed us to incorporate better testing into our
-deployments. We have several suites of tests that run after a deployment to
-verify that it works correctly. These all run in parallel with each other:
+Having a pipeline has allowed us to improve the testing and confidence of
+our deployments. We have several suites of tests that run after a deployment
+to verify that it works correctly. These all run in parallel with each
+other:
 
 - [performance tests][]
   to check the response times of an application through the routing tier for
@@ -87,11 +88,11 @@ failures. Unfortunately we can't run the upstream availability tests in
 production because they taint the global state of the environment and could
 leave it not functioning correctly.
 
-In addition to those we have some tests that run during a deployment, in
-parallel to operations like Terraform and BOSH. Uptime is really important
-for us and our users so we want to know that all of our deployments are
-zero-downtime. The following are started at the beginning of the pipeline
-and stopped near the end:
+We also have some tests that run during a deployment, in parallel to
+operations like Terraform and BOSH. Uptime is really important for us and
+our users so we want to know that all of our deployments are zero-downtime.
+The following are started at the beginning of the pipeline and stopped near
+the end:
 
 - [application availability tests][]
   which use the [vegeta][] load testing library to send a constant rate of
@@ -136,24 +137,26 @@ changes without easily knowing whether it was going to make it better or
 worse. So we wrote some integration tests that operate against a local git
 repository and describe the behaviours that we expect.
 
-### Password and certificate generation
+### Secret generation
 
-- certstrap
-- password library
+We generate all passwords, TLS keys/certs, and SSH host keys within the
+deployment pipeline. This means that:
 
-### Overnight auto-delete
+- every environment gets a unique set of secrets
+- we don't need to define them up-front, which is hard work and error prone
+- most secrets never need to leave the environment, which reduces the
+  chance of a secret being compromised or leaked
 
-- within environment, can be left to run
-- HA failure testing
+For passwords and SSH host keys we have a [small Ruby library][] that takes
+a hash of secret names and types, plus a hash of existing secrets, and will
+generate new secrets for any names that aren't currently populated. For TLS
+keys and certificates we use [Square's certstrap][] utility to generate and
+sign.
 
-### Self updating
+[small Ruby library]: https://github.com/alphagov/paas-cf/blob/prod-0.1.82/manifests/shared/lib/secret_generator.rb
+[certstrap]: https://github.com/square/certstrap
 
-- ensure jobs match code
-
-### Run job
-
-- normally pass commit ref through
-- detach repo to run from latest commit
+- rotate jobs
 
 ### IAM roles and profiles
 
@@ -180,6 +183,16 @@ allow profile support but they weren't accepted by upstream, so we've
 maintained our forks since.
 
 [iam-pr]: https://github.com/concourse/s3-resource/pull/22
+
+### Overnight auto-delete
+
+- within environment, can be left to run
+- shutdown RDS
+
+### Run job
+
+- normally pass commit ref through
+- detach repo to run from latest commit
 
 ### Removing CI environment
 
