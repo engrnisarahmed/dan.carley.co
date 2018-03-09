@@ -25,7 +25,7 @@ practice soldering on a variety of projects. The bundle only contained the
 PCBs so I had to source all of the components myself. I'd never done this
 before, but it was quite straightforward, because the page for each project
 lists all of the components you need and in most cases even links to the
-specific [Farnell]() or [Rapid][] product pages.
+specific [Farnell][] or [Rapid][] product pages.
 
 [Farnell]: https://uk.farnell.com/
 [Rapid]: https://www.rapidonline.com/
