@@ -12,7 +12,7 @@ jobs:
       - run: curl -L https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz | tar -zxvC bin hugo
       - run: ./bin/hugo -v
       - persist_to_workspace:
-          root: .
+          root: ~/project
           paths:
             - public
 
@@ -24,10 +24,11 @@ jobs:
       BUCKET_NAME: dan.carley.co
     steps:
       - attach_workspace:
-          at: public
+          at: ~/project
       - run: mkdir -p bin
       - run: curl -L https://github.com/bep/s3deploy/releases/download/v${S3DEPLOY_VERSION}/s3deploy_${S3DEPLOY_VERSION}_Linux-64bit.tar.gz | tar -zxvC bin s3deploy
-      - run: ./bin/s3deploy -source=public/ -region=eu-west-1 -bucket=${BUCKET_NAME}
+      - run: echo ./bin/s3deploy -source=public/ -region=eu-west-1 -bucket=${BUCKET_NAME}
+      - run: find . -ls
 
 workflows:
   version: 2
