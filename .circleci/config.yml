@@ -21,7 +21,7 @@ jobs:
     steps:
       - run: mkdir -p bin
       - run: curl -L https://github.com/bep/s3deploy/releases/download/v${S3DEPLOY_VERSION}/s3deploy_${S3DEPLOY_VERSION}_Linux-64bit.tar.gz | tar -zxvC bin s3deploy
-      - run: ./bin/s3deploy -source=public/ -bucket=${BUCKET_NAME}
+      - run: ./bin/s3deploy -source=public/ -region=eu-west-1 -bucket=${BUCKET_NAME}
 
 workflows:
   version: 2
