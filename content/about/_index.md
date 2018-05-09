@@ -3,7 +3,8 @@ title: About
 ---
 
 I'm an experienced systems administrator, software developer, and network
-engineer. I enjoy writing Go code and contributing to open source.
+engineer. I enjoy writing code in Go and contributing to open source
+projects.
 
 Away from the screen I can be found climbing, cycling, photographing,
 generally being outdoors, and parenting like an eternal novice.
