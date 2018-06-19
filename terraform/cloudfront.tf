@@ -1,7 +1,8 @@
 data "aws_acm_certificate" "website" {
-  domain   = "${var.website_name}"
-  statuses = ["ISSUED"]
-  provider = "aws.us-east"
+  domain      = "${var.website_name}"
+  statuses    = ["ISSUED"]
+  most_recent = true
+  provider    = "aws.us-east"
 }
 
 resource "aws_cloudfront_distribution" "website" {
