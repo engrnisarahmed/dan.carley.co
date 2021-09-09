@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/golang:1.10
     environment:
-      HUGO_VERSION: 0.40.2
+      HUGO_VERSION: 0.87.0
     steps:
       - checkout
       - run: git submodule update --init

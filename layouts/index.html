@@ -1,22 +1,14 @@
 {{ partial "header" . }}
 
-<main id='main' class='main'>
-  {{ if .Content }}
-  <article class='entry'>
-    {{ partial "entry/content" . }}
-  </article>
-  {{ end }}
+<div class='container list-container'>
+  <ul class='list'>
+    {{- $paginator := .Paginate (where .Site.RegularPages "Type" "post") -}}
+    {{ range $paginator.Pages }}
+      {{ .Render "li" }}
+    {{ end }}
+  </ul>
 
-  <div class='list-container'>
-    <ul class='list'>
-      {{- $paginator := .Paginate (where .Site.Pages "Type" "post") -}}
-      {{ range $paginator.Pages }}
-        {{ .Render "li" }}
-      {{ end }}
-    </ul>
-
-    {{ partial "nav/pagination" . }}
-  </div>
-</main>
+  {{ partial "nav/pagination" . }}
+</div>
 
 {{ partial "footer" . }}
